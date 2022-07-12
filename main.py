@@ -4,10 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-CHROME_DRIVER_PATH = 'C:\\Users\\anila\\ChromeDriver\\chromedriver.exe'
+CHROME_DRIVER_PATH = 'C:\\PATH\\chromedriver.exe'
 SIMILAR_ACCOUNT = 'balenciaga'
-USERNAME = 'ani.laliashvili@yahoo.com'
-PASSWORD = 'AbadeliDelia3749'
+USERNAME = 'MYUSERNAME'
+PASSWORD = 'MYPASSWORD'
 
 
 driver = webdriver.Chrome(service=Service(CHROME_DRIVER_PATH))
@@ -61,4 +61,4 @@ for user in to_follow:
     time.sleep(2)
 
 
-#driver.quit()
+driver.quit()
