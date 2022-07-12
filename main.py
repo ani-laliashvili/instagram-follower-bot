@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
 
 CHROME_DRIVER_PATH = 'C:\\PATH\\chromedriver.exe'
@@ -9,7 +8,7 @@ SIMILAR_ACCOUNT = 'balenciaga'
 USERNAME = 'MYUSERNAME'
 PASSWORD = 'MYPASSWORD'
 
-
+## Login
 driver = webdriver.Chrome(service=Service(CHROME_DRIVER_PATH))
 driver.get('https://www.instagram.com/')
 time.sleep(6)
@@ -36,7 +35,7 @@ try:
 except:
     print('')
 
-
+## Find Followers
 driver.get(f'https://www.instagram.com/{SIMILAR_ACCOUNT}')
 time.sleep(5)
 
@@ -52,6 +51,7 @@ for i in range(10):
     driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scr1)
     time.sleep(2)
 
+## Follow users discovered    
 for user in to_follow:
     try:
         user.click()
